@@ -1,0 +1,79 @@
+.rodada{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodada > span{
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 10px;
+    font-size: 1.6em;
+    color: rgb(0, 0, 0);
+}
+
+.timeA{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dados > h3{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+    font-size: 1.3em;
+}
+
+.dados > img{
+    width: 65px;
+}
+
+.timeA > input{
+    text-align: center;
+    font-size: 1.5em;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 30px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-left: 10px;
+}
+
+.timeB{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.timeB > input{
+    text-align: center;
+    font-size: 1.5em;
+    width: 45px;
+    height: 45px;
+    margin-bottom: 30px;
+    border: 1px solid;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+}
+
+.data{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: rgb(0, 0, 0);
+    font-weight: lighter;
+}
