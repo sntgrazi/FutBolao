@@ -14,7 +14,6 @@ include_once "config.php";
 date_default_timezone_set('America/Sao_Paulo');
 $login = $_SESSION['usuario'];
 $data = date("Y-m-d");
-$tipo = "";
 
 
 $dados = filter_input_array(INPUT_POST, FILTER_DEFAULT);
@@ -25,13 +24,12 @@ if(!empty($dados['aposta'])){
     //echo"timea: $valor <br>";
     //echo"timeb:" .  $dados['timeb'][$chave]  . "<br>";
     //echo "<hr>";
-    $timeA = $valor;
-
+    $timeA = $valor;   
     $sql = "INSERT INTO apostateste (id_dadojogos,timea, timab, user, dataH) VALUE (?,?,?,?,?)";
     $aposta = $mysqli->prepare($sql);
     $aposta->bind_param('sssss',$dados['jogo'][$chave+1], $timeA, $dados['timeb'][$chave], $login, $data);
     $aposta->execute();
-
+    
     ?>
     <script> 
     Swal.fire({

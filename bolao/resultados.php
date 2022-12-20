@@ -53,7 +53,7 @@ include "_scripts/config.php"
                             <img src="_images/<?php echo $dados['timea']; ?>.png">
                             <h3><?php echo $dados['timea']; ?></h3>
                        </div>
-                       <input type="text" value="<?php echo $dados['rt1']?>" class="form-control" width="20px" name="timea[]" maxlength="2"  disabled>
+                       <input type="text" value="<?php echo $dados['rt1']?>" class="form-control" width="20px" name="timea[]" maxlength="2"  disabled >
                     </div>
                     <span>X</span>
                     <div class="timeB">

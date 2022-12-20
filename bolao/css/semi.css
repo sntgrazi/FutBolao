@@ -10,7 +10,7 @@ html{
 }
 
 form{
-    height: 81vh;
+    height: 84vh;
     width: 94%;
     background-color: #6C0B29;
     border-radius: 10px;
@@ -23,7 +23,7 @@ form{
 .btn_enviar{
     width: 120px;
     padding: 20px;
-    margin: auto;
+    margin: 70px auto;
     border: none;
     border-radius: 10px;
     font-size: 1.3em;
@@ -63,17 +63,11 @@ form{
 }
 
 .partidas{
-    width: 100%;
+    width: 50%;
     display:grid;
-    grid-template-columns: auto auto auto;
-    margin-left: 30px;
-}
-
-.oitavasG{
-    width: 70%;
-    display: grid;
     grid-template-columns: auto auto;
-    margin-left: 230px;
+    column-gap: 20px;
+    margin: auto;
 }
 
 .jogos{

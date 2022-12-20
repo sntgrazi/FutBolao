@@ -24,15 +24,17 @@ include "../_scripts/config.php"
 </head>
 
 <body>
-
+    
     <?php include "../menu02.php" ?>
+    
 
     <div class="items">
            <?php include "../buttons.php" ?>
         <form method="post" action="../processa.php">
+        
             <div class="container">
                 <h2 id="semi">SemiFinal</h2>
-                <div class="oitavasG">
+                <div class="partidas">
                     <?php
             $sql = "SELECT * FROM dados_jogos WHERE rodada = 'SEMIFINAL'";
             $query = $mysqli->query($sql);
@@ -40,6 +42,7 @@ include "../_scripts/config.php"
             $j = 2;
             while ($dados = $query->fetch_array()) {
             ?>
+            
             <input type="hidden" name="jogo[<?php echo $a; ?>]" value="<?php echo $dados['id']; ?>">
                     <div class="jogos">
                         <div class="info">
@@ -58,11 +61,14 @@ include "../_scripts/config.php"
                                         <?php echo $dados['timea']; ?>
                                     </h3>
                                 </div>
-                                <input type="text" class="form-control" width="20px"  id="inputC" name="timea[]" maxlength="2"  required>
+                                <input type="text" class="form-control custom" width="20px"  name="timea[]" maxlength="2"  required 
+                                <?php if(CustomInput($_SESSION['usuario'],$dados['id'])>=1){echo "disabled";} ?>
+                                >
                             </div>
                             <span>X</span>
                             <div class="timeB"> 
-                                <input type="text" name="timeb[]" class="form-control" id="inputC" width="20px"  maxlength="2" required >
+                                <input type="text" name="timeb[]" class="form-control custom"  width="20px"  maxlength="2" required 
+                                <?php if(CustomInput($_SESSION['usuario'],$dados['id'])>=1){echo "disabled";} ?>>
                                 <div class="dados">
                                     <img src="../_images/<?php echo $dados['timeb']; ?>.png"><br>
                                     <h3>
@@ -80,14 +86,17 @@ include "../_scripts/config.php"
                             </h4>
                         </div>
                     </div>
+                    <?php ; ?>
                     <?php $a++;$j++;
+                   
             } ?>
                 </div>
             </div>
             <input id="inputBtn" class="btn_enviar" type="submit" value="Salvar" name="aposta">
-         </div>  
+         </div> 
         </form>
-     </div>
+        
+    </div>
 </body>
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
