@@ -2,7 +2,7 @@
 
 Sistema de bolão da copa feita para a aula de desenvolvimento web.
 
-# Tecnologis utilizadas:
+# Tecnologias utilizadas:
 
 - PHP;
 - Mysql;
